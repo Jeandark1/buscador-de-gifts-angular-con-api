@@ -1,0 +1,26 @@
+<div class="animate__animated animate__backInLeft animate__faster">
+    <h2>
+        Por Capital</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col">
+            <app-pais-input (onEnter)="buscar(  $event )" (onDebounce)="sugerenciasC( $event )" placeholder="Buscar Capital">
+            </app-pais-input>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div *ngIf="hayErrorC" class="alert alert-danger">
+    nose se encontro la capital con el nombre de termino {{ terminoC}}
+</div>
+
+<div *ngIf="paises.length > 0" class="row">
+    <div class="col">
+
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+
+    </div>
+</div>
