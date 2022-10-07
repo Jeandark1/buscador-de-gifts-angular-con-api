@@ -32,8 +32,7 @@ export class PaisInputComponent implements OnInit {
     this.debouncer.next( this.termino);
   }
 
-  constructor() { }
+  constructor(){ }
 
- 
 
 }

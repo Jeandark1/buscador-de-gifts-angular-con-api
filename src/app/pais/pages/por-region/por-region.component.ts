@@ -15,6 +15,8 @@ export class PorRegionComponent {
   regionActiva: string='';
   hayErrorR: boolean= false;
   paisesr: country[]=[];
+  
+
 
   constructor( private PaisService: PaisService) { }
 

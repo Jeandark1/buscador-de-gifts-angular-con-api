@@ -14,7 +14,7 @@ export class PaisService {
 
 
   get httpParams(){
-    return new HttpParams().set('fields','name,capital,alpha2code,flags,population,cioc')
+    return new HttpParams().set('fields','name,capital,alpha2code,flags,population,cioc,cca3,cca2,ccn3')
   }
 
   constructor( private http: HttpClient) { }
@@ -34,6 +34,8 @@ export class PaisService {
   getPaisPorAlpha( id: String ): Observable<country> {
     const url =`${ this.apiUrl}/alpha/${ id }`;
     return this.http.get<country>( url );
+
+   
   }
   
 
